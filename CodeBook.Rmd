@@ -1,0 +1,119 @@
+---
+title: "CodeBook"
+output: html_document
+date: "2022-11-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Codebook for project 
+
+subject_num               The unique id's for each participant for both training and testing data sets
+activities                activity variable for showing which activity was being measure for each observation
+tBodyAcc-mean()-X         Mean body accelerometer score of -1 to 1 for the X signal
+tBodyAcc-mean()-Y         Mean body accelerometer score of -1 to 1 for the y signal
+tBodyAcc-mean()-Z         Mean body accelerometer score of -1 to 1 for the z signal
+tBodyAcc-std()-X          Standard deviation body accelerometer score of -1 to 1 for the X signal
+tBodyAcc-std()-Y          Standard deviation body accelerometer score of -1 to 1 for the y signal
+tBodyAcc-std()-Z          Standard deviation body accelerometer score of -1 to 1 for the z signal
+tGravityAcc-mean()-X      Mean gravity accelerometer score of -1 to 1 for the X signal
+tGravityAcc-mean()-Y      Mean gravity accelerometer score of -1 to 1 for the y signal
+tGravityAcc-mean()-Z      Mean gravity accelerometer score of -1 to 1 for the z signal
+tGravityAcc-std()-X       Standard deviation gravity accelerometer score of -1 to 1 for the X signal
+tGravityAcc-std()-Y       Standard deviation gravity accelerometer score of -1 to 1 for the y signal
+tGravityAcc-std()-Z       Standard deviation gravity accelerometer score of -1 to 1 for the z signal
+tBodyAccJerk-mean()-X     Mean of the body linear acceleration velocity score of -1 to 1 for signal x
+tBodyAccJerk-mean()-Y     Mean of the body linear acceleration velocity score of -1 to 1 for signal y
+tBodyAccJerk-mean()-Z     Mean of the body linear acceleration velocity score of -1 to 1 for signal z
+tBodyAccJerk-std()-X      SD of the body linear acceleration velocity score of -1 to 1 for signal x
+tBodyAccJerk-std()-Y      SD of the body linear acceleration velocity score of -1 to 1 for signal x
+tBodyAccJerk-std()-Z      SD of the body linear acceleration velocity score of -1 to 1 for signal x
+tBodyGyro-mean()-X        
+tBodyGyro-mean()-Y
+tBodyGyro-mean()-Z
+tBodyGyro-std()-X
+tBodyGyro-std()-Y
+tBodyGyro-std()-Z
+tBodyGyroJerk-mean()-X    Mean magnitude of signal X score of -1 to 1
+tBodyGyroJerk-mean()-Y    Mean magnitude of signal y score of -1 to 1
+tBodyGyroJerk-mean()-Z    Mean magnitude of signal z score of -1 to 1
+tBodyGyroJerk-std()-X     SD magnitude of signal x score of -1 to 1
+tBodyGyroJerk-std()-Y     SD magnitude of signal y score of -1 to 1
+tBodyGyroJerk-std()-Z     SD magnitude of signal z score of -1 to 1
+tBodyAccMag-mean()        Mean magnitude score of -1 to 1
+tBodyAccMag-std()         SD magnitude score of -1 to 1
+tGravityAccMag-mean()     Mean gravity magnitude score of -1 to 1 
+tGravityAccMag-std()      SD gravity magnitude score of -1 to 1 
+tBodyAccJerkMag-mean()    Mean body acceleration magnitude score -1 to 1
+tBodyAccJerkMag-std()     SD body acceleration magnitude score of -1 to 1
+tBodyGyroMag-mean()       Mean gravity acceleration magnitude of -1 to 1 
+tBodyGyroMag-std()        SD gravity acceleration magnitude of -1 to 1
+tBodyGyroJerkMag-mean()   Mean gravity jerk signal magnitude of -1 to 1
+tBodyGyroJerkMag-std()    SD gravity jerk signal magnitude of -1 to 1
+fBodyAcc-mean()-X         Fast fourier mean body accelerometer score of -1 to 1 for the X signal
+fBodyAcc-mean()-Y         Fast fourier mean body accelerometer score of -1 to 1 for the y signal
+fBodyAcc-mean()-Z         Fast fourier mean body accelerometer score of -1 to 1 for the z signal
+fBodyAcc-std()-X          Fast fourier sd body accelerometer score of -1 to 1 for the X signal
+fBodyAcc-std()-Y          Fast fourier sd body accelerometer score of -1 to 1 for the y signal
+fBodyAcc-std()-Z          Fast fourier sd body accelerometer score of -1 to 1 for the z signal
+fBodyAcc-meanFreq()-X
+fBodyAcc-meanFreq()-Y
+fBodyAcc-meanFreq()-Z
+fBodyAccJerk-mean()-X
+fBodyAccJerk-mean()-Y
+fBodyAccJerk-mean()-Z
+fBodyAccJerk-std()-X
+fBodyAccJerk-std()-Y
+fBodyAccJerk-std()-Z
+fBodyAccJerk-meanFreq()-X
+fBodyAccJerk-meanFreq()-Y
+fBodyAccJerk-meanFreq()-Z
+fBodyGyro-mean()-X
+fBodyGyro-mean()-Y
+fBodyGyro-mean()-Z
+fBodyGyro-std()-X
+fBodyGyro-std()-Y
+fBodyGyro-std()-Z
+fBodyGyro-meanFreq()-X
+fBodyGyro-meanFreq()-Y
+fBodyGyro-meanFreq()-Z
+fBodyAccMag-mean()
+fBodyAccMag-std()
+fBodyAccMag-meanFreq()
+fBodyBodyAccJerkMag-mean()
+fBodyBodyGyroMag-mean()
+fBodyBodyGyroMag-std()
+fBodyBodyGyroMag-meanFreq()
+fBodyBodyGyroJerkMag-mean()
+fBodyBodyGyroJerkMag-std()
+fBodyBodyGyroJerkMag-meanFreq()
+
+## The data 
+Number of rows is 10299, number of columns is 81. Decription of the data from the features file. 
+The features selected for this database come from the accelerometer and 
+gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain 
+signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. 
+Then they were filtered using a median filter and a 3rd order low pass 
+Butterworth filter with a corner frequency of 20 Hz to remove noise. 
+Similarly, the acceleration signal was then separated into body and gravity 
+acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass 
+Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in 
+time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the 
+magnitude of these three-dimensional signals were calculated using the 
+Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, 
+tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these 
+signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, 
+fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+## Tranformations 
+[stuff here should takl about what form the data is in and some rationale for choosing that form such as using it
+for a particular analysis.]
